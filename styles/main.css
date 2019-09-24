@@ -1,0 +1,94 @@
+body {
+ background-image: url(../images/Bckground.jpg);
+ background-size: 1300px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  height: 10vh;
+  text-align: center;
+}
+
+.container2 {
+  display: flex;
+  min-height: 70vh;
+  margin: 30px 10px;
+}
+.container2 div{
+  border: 1px solid grey;
+  padding: 10px;
+}
+.left-container {
+  flex: 1;
+}
+.left-container h3 {
+  margin-top: 70%;
+}
+.left-container img {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+.middle-container {
+  flex: 2;
+}
+
+.right-container {
+  flex: 1;
+}
+
+/* Board */
+#board div {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  float: left;
+  width: 30px;
+  height: 30px;
+  /* border-radius: 30%; */
+}
+#board {
+  width: calc(18 * 40px);
+  margin: auto;
+  box-shadow:0 0 0px 0 rgba(0, 0, 0, 1);
+}
+/* Board end */
+h1 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+#board .snake {
+  background-image: url(../images/whale.png);
+  background-size: 25px;
+}
+#board .coin {
+  background-image: url(../images/BTC\ project1.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  
+
+}
+img {
+  height: 300px;
+  width: 400px;
+  display: flex;
+  margin-left: 25%;
+}
+
+/* @media (max-width: 649px) {
+  #board {
+      width: calc(18 * 3.5vw);
+  }
+
+  #board div {
+      width: 3.5vw;
+      height: 3.5vw;
+  }
+} */
