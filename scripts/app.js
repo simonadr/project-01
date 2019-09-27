@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Default position for the snake in the middle of the board.
     snakeX = Math.floor(boardWidth / 2)
     snakeY = Math.floor(boardHeight / 2)
-    snakeLength = 3
+    snakeLength = 2
     snakeDirection = 'Up'
     // Clear the board
     for (var y = 0; y < boardHeight; ++y) {
@@ -69,10 +69,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     // Check for walls, and restart if we collide with any
     if (snakeX < 0 || snakeY < 0 || snakeX >= boardWidth || snakeY >= boardHeight) {
+      // alert('You got liquidated')
       startGame()
     }
     // Tail collision
     if (board[snakeY][snakeX].snake > 0) {
+      // alert('You got liquidated')
       startGame()
     }
     // Collect coins
@@ -82,8 +84,9 @@ window.addEventListener('DOMContentLoaded', () => {
       placeCoin()
     }
     // SCORE
+    document.querySelector('#score').innerHTML = `Your score is ${snakeLength - 2} BTC`
 
-    document.querySelector('#score').innerHTML = `Your score is ${snakeLength - 3} BTC`
+
     // Update the board at the new snake position
     board[snakeY][snakeX].snake = snakeLength
     // Loop over the entire board, and update every cell
@@ -118,5 +121,11 @@ window.addEventListener('DOMContentLoaded', () => {
     // This prevents the arrow keys from scrolling the window
     event.preventDefault()
   }
+
+  // const playButton = document.querySelector('button')
+  // const boardPlay = document.querySelector('#board')
+  // playButton.addEventListener('click', function () {
+  //   boardPlay.style.display = 'block'
+  // })
   initGame()
 }) 

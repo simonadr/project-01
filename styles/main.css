@@ -1,6 +1,8 @@
 body {
  background-image: url(../images/Bckground.jpg);
  background-size: 1300px;
+ font-family: Arial, Helvetica, sans-serif;
+ 
 }
 
 .wrapper {
@@ -20,7 +22,7 @@ body {
   margin: 30px 10px;
 }
 .container2 div{
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   padding: 10px;
 }
 .left-container {
@@ -41,6 +43,7 @@ body {
 
 .right-container {
   flex: 1;
+  margin-top: 5%;
 }
 
 /* Board */
@@ -50,7 +53,8 @@ body {
   float: left;
   width: 30px;
   height: 30px;
-  /* border-radius: 30%; */
+  border-radius: 20%;
+  /* display: none; */
 }
 #board {
   width: calc(18 * 40px);
@@ -60,9 +64,32 @@ body {
 /* Board end */
 h1 {
   text-align: center;
+  padding-top: 5%;
+  text-shadow: 1px 2px 0 gray;
+  /* text-transform: uppercase; */
+}
+button {
+  margin-left: 30%;
+  width: 100px;
+}
+.scale:hover {
+  transition: transform 1s ease;
+  transform: scale(1.5);
 }
 h3 {
   text-align: center;
+  border: 2px solid black;
+  padding: 10px;
+  text-shadow: 1px 2px 0 gray;
+}
+
+li {
+  font-weight: bold;
+}
+
+aside {
+  border: 2px solid black;
+  padding: 10px;
 }
 #board .snake {
   background-image: url(../images/whale.png);
@@ -75,12 +102,7 @@ h3 {
   
 
 }
-img {
-  height: 300px;
-  width: 400px;
-  display: flex;
-  margin-left: 25%;
-}
+
 
 /* @media (max-width: 649px) {
   #board {
